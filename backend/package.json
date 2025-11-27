@@ -1,0 +1,28 @@
+{
+  "name": "notifications-backend",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node src/server.js",
+    "prisma:generate": "npx prisma generate",
+    "prisma:migrate": "npx prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.0.1",
+    "@prisma/client": "^7.0.0",
+    "body-parser": "^1.20.2",
+    "bullmq": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.19.0",
+    "http": "^0.0.1-security",
+    "nodemailer": "^6.9.0",
+    "pg": "^8.16.3",
+    "redis": "^4.6.7",
+    "socket.io": "^4.7.0",
+    "web-push": "^3.6.6"
+  },
+  "devDependencies": {
+    "prisma": "^7.0.0"
+  }
+}
