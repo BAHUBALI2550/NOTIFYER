@@ -25,15 +25,15 @@ This system is a template for modern, reliable, and scalable real-time notificat
 
 ### 🔐 Auth Page
 
-![Auth Page Screenshot](https://drive.google.com/file/d/1ZYV0YKyV2B3t1vbwJJgHPzrhv7unHY_R/view?usp=sharing)
+![Auth Page Screenshot](https://drive.google.com/uc?export=view&id=1ZYV0YKyV2B3t1vbwJJgHPzrhv7unHY_R)
 
 ### 🏠 Dashboard
 
-`https://drive.google.com/file/d/1gWY7fbBPm14BzAEDYcmw28k6oy9U1-Hk/view?usp=sharing`
+![Dashboard Page Screenshot](https://drive.google.com/uc?export=view&id=1gWY7fbBPm14BzAEDYcmw28k6oy9U1-Hk)
 
 ### 🏗 High Level Architecture Diagram
 
-`https://drive.google.com/file/d/19uy4eWsRJEz_YrZU15aH9TgCW4KDbMRb/view?usp=drive_link`
+![HLD Screenshot](https://drive.google.com/uc?export=view&id=19uy4eWsRJEz_YrZU15aH9TgCW4KDbMRb)
 
 ---
 
