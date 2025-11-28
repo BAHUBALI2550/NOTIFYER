@@ -25,18 +25,15 @@ This system is a template for modern, reliable, and scalable real-time notificat
 
 ### 🔐 Auth Page
 
-*(Place image here)*
-`/screenshots/authpage.png`
+`https://drive.google.com/file/d/1ZYV0YKyV2B3t1vbwJJgHPzrhv7unHY_R/view?usp=sharing`
 
 ### 🏠 Dashboard
 
-*(Place image here)*
-`/screenshots/dashboard.png`
+`https://drive.google.com/file/d/1gWY7fbBPm14BzAEDYcmw28k6oy9U1-Hk/view?usp=sharing`
 
 ### 🏗 High Level Architecture Diagram
 
-*(Place architecture diagram here)*
-`/screenshots/architecture.png`
+`https://drive.google.com/file/d/19uy4eWsRJEz_YrZU15aH9TgCW4KDbMRb/view?usp=drive_link`
 
 ---
 
@@ -227,7 +224,7 @@ notifyer/
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/notifyer
+git clone https://github.com/BAHUBALI2550/NOTIFYER
 cd notifyer
 ```
 
