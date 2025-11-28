@@ -1,0 +1,101 @@
+# -------------------------
+# ENVIRONMENT & SECRETS
+# -------------------------
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.env
+
+# Prevent pushing backend env
+backend/.env
+
+# Prevent pushing frontend env
+frontend/.env
+
+# VAPID / SMTP keys (if generated outside env)
+vapid_*.json
+*.pem
+
+# -------------------------
+# NODE / REACT BUILD FILES
+# -------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build output
+dist/
+build/
+.cache/
+.next/
+out/
+coverage/
+
+# React
+frontend/build/
+frontend/node_modules/
+
+# Backend
+backend/node_modules/
+backend/build/
+
+# -------------------------
+# PRISMA FILES
+# -------------------------
+backend/prisma/generated/
+backend/generated/
+.prisma/
+
+# -------------------------
+# LOGS
+# -------------------------
+logs/
+*.log
+*.log.*
+backend/*.log
+frontend/*.log
+
+# BullMQ debug files
+*.rdb
+
+# -------------------------
+# DOCKER
+# -------------------------
+docker-data/
+docker-compose.override.yml
+*.dockerfile
+
+# PostgreSQL volumes
+pgdata/
+docker/postgres-data/
+
+# Redis dump
+dump.rdb
+redis-data/
+
+# -------------------------
+# EDITOR / IDE FILES
+# -------------------------
+.vscode/
+.vscode/*
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# MISC
+# -------------------------
+*.zip
+*.tar
+*.tgz
+*.tmp
