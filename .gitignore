@@ -37,7 +37,7 @@ out/
 coverage/
 
 # React
-frontend/build/
+# frontend/build/
 
 # Backend
 backend/build/
