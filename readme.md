@@ -25,7 +25,7 @@ This system is a template for modern, reliable, and scalable real-time notificat
 
 ### 🔐 Auth Page
 
-`https://drive.google.com/file/d/1ZYV0YKyV2B3t1vbwJJgHPzrhv7unHY_R/view?usp=sharing`
+![Auth Page Screenshot](https://drive.google.com/file/d/1ZYV0YKyV2B3t1vbwJJgHPzrhv7unHY_R/view?usp=sharing)
 
 ### 🏠 Dashboard
 
