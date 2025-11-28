@@ -36,33 +36,6 @@ const INSTANCE_ID = `instance-${Math.random().toString(36).slice(2)}`;
 
 const userSockets = new Map(); // mapping userId to Set<socket>
 
-// io.on('connection', (socket) => {
-//     console.log('Socket connected', socket.id);
-
-//     socket.on('auth', async ({ userId }) => {
-//         if(!userId) return;
-//         if(!userSockets.has(userId)) {
-//             userSockets.set(userId, new Set());
-//         }
-//         userSockets.get(userId).add(socket);
-//         await setUserOnline(userId, INSTANCE_ID);
-//         console.log(`User ${userId} online on socket ${socket.id}`);
-//     });
-
-//     socket.on('disconnect', async () => {
-//         for(const [userId, sockets] of userSockets.entries()) {
-//             if (sockets.has(socket)) {
-//                 sockets.delete(socket);
-//                 if (sockets.size === 0) {
-//                     userSockets.delete(userId);
-//                     await setUserOffline(userId);
-//                 }
-//             }
-//         }
-//         console.log('Socket disconnected', socket.id);
-//     });
-// });
-
 io.on('connection', (socket) => {
   console.log('Socket connected', socket.id);
 
