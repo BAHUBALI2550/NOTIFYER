@@ -29,7 +29,10 @@ const io = new Server(server, {
     cors: {origin: '*', methods: ['GET', 'POST']},
 });
 
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_ORIGIN || '*',
+  credentials: true,
+}));
 app.use(bodyParser.json());
 
 const INSTANCE_ID = `instance-${Math.random().toString(36).slice(2)}`;
