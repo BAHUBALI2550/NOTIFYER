@@ -1,4 +1,3 @@
-// backend/src/workers/pushWorker.js
 const { Worker } = require('bullmq');
 const webPush = require('web-push');
 const { prisma } = require('../prismaClient');
@@ -8,7 +7,7 @@ const connection = {
   port: Number(process.env.REDIS_PORT || 6379),
 };
 
-// Configure web-push with your VAPID keys
+// Configure web-push
 webPush.setVapidDetails(
   'mailto:admin@example.com',
   process.env.VAPID_PUBLIC_KEY,

@@ -1,4 +1,3 @@
-// frontend/src/components/Dashboard.js
 import React, { useState } from 'react';
 
 function Dashboard({

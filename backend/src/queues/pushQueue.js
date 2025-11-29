@@ -1,4 +1,3 @@
-// backend/src/queues/pushQueue.js
 const { Queue } = require('bullmq');
 
 const connection = {

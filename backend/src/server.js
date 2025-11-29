@@ -96,7 +96,6 @@ sub.connect().then(() => {
 });
 
 // API Routes
-
 //Signup
 app.post('/signup', async (req, res) => {
     try {

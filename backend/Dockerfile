@@ -13,10 +13,10 @@ COPY prisma.config.ts ./
 # This only needs to be a valid-looking URL; the DB doesn't have to be reachable for generate.
 ENV DATABASE_URL=postgresql://postgres:postgres@postgres:5432/notifications?schema=public
 
-# Generate Prisma client into node_modules/@prisma/client
+# Generates Prisma client into node_modules/@prisma/client
 RUN npx prisma generate
 
-# Now copy the rest of the source
+# copy the rest of the source
 COPY src ./src
 
 EXPOSE 4000

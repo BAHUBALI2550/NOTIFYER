@@ -10,7 +10,6 @@ const pool = new Pool({
 
 const adapter = new PrismaPg(pool);
 
-// Prisma 7: engine type "client" needs adapter or accelerateUrl
 const prisma = new PrismaClient({ adapter });
 
 module.exports = { prisma };

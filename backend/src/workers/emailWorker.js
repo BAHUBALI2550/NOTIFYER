@@ -1,4 +1,3 @@
-// backend/src/workers/emailWorker.js
 const { Worker } = require('bullmq');
 const { sendWelcomeEmail, sendWelcomeBackEmail } = require('../emailService');
 

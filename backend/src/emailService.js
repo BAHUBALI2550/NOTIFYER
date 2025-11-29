@@ -2,8 +2,6 @@ const nodemailer = require('nodemailer');
 
 //SMTP Provider
 const transport = nodemailer.createTransport({
-    // host: process.env.SMTP_HOST || 'localhost',
-    // port: Number(process.env.SMTP_PORT || 1025),
     service: "Gmail",
     secure: true,
     auth: process.env.SMTP_USER ? {

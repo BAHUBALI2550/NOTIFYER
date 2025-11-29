@@ -1,4 +1,3 @@
-// frontend/src/components/AuthPage.js
 import React, { useState } from 'react';
 
 function AuthPage({ loading, onSignup, onLogin }) {

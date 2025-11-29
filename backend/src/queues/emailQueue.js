@@ -1,4 +1,3 @@
-// backend/src/queues/emailQueue.js
 const { Queue } = require('bullmq');
 
 const connection = {
