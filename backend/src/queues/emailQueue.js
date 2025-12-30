@@ -8,7 +8,7 @@ const connection = {
 const emailQueue = new Queue('email_queue', {
   connection,
   defaultJobOptions: {
-    attempts: 5,
+    attempts: 10,
     backoff: {
       type: 'exponential',
       delay: 1000,
