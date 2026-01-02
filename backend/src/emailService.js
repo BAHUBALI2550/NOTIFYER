@@ -1,15 +1,37 @@
 const nodemailer = require('nodemailer');
 
 //SMTP Provider
+// const transport = nodemailer.createTransport({
+//     service: "Gmail",
+//     secure: false,
+//     auth: process.env.SMTP_USER ? {
+//         user: process.env.SMTP_USER,
+//         pass: process.env.SMTP_PASS,
+//     }
+//     : undefined,
+// });
+
 const transport = nodemailer.createTransport({
-    service: "Gmail",
-    secure: false,
-    auth: process.env.SMTP_USER ? {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-    }
-    : undefined,
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false, // IMPORTANT
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false, // for render
+  },
 });
+
+(async () => {
+  try {
+    await transport.verify();
+    console.log("✅ SMTP server verified & ready");
+  } catch (err) {
+    console.error("❌ SMTP verification failed:", err);
+  }
+})();
 
 async function sendWelcomeEmail(toEmail, name) {
     try {
