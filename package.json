@@ -7,6 +7,7 @@
     "http": "^0.0.1-security",
     "nodemailer": "^7.0.10",
     "redis": "^5.10.0",
+    "resend": "^6.6.0",
     "socket.io": "^4.8.1",
     "web-push": "^3.6.7"
   },
