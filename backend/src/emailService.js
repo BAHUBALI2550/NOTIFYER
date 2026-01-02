@@ -4,6 +4,7 @@ const { Resend } = require("resend");
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 //SMTP Provider
+// for docker
 // const transport = nodemailer.createTransport({
 //     service: "Gmail",
 //     secure: false,
@@ -18,7 +19,14 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 async function sendWelcomeEmail(toEmail, name) {
     try {
         console.log(`gg:${toEmail}`);
-    const info = await resend.emails.send({
+    const info = 
+    // await transport.sendMail({
+    //     from: process.env.SMTP_USER,
+    //     to: toEmail,
+    //     subject: 'Welcome! ',
+    //     text: `Hi ${name}, Welcome! Thanks for using our service, wishing you a smooth experience through our platform. Feel free to send us any issue or troubleshoot`,
+    // });
+    await resend.emails.send({
     from: "Notifyer <dinesh967070.ds@gmail.com>",
     to: toEmail,
     subject: "Welcome!",
@@ -34,7 +42,14 @@ async function sendWelcomeEmail(toEmail, name) {
 async function sendWelcomeBackEmail(toEmail, name) {
     try {
         console.log(`gg:${toEmail}`);
-    const info = await resend.emails.send({
+    const info = 
+    // await transport.sendMail({
+    //     from: process.env.SMTP_USER,
+    //     to: toEmail,
+    //     subject: 'Welcome back! ',
+    //     text: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
+    // });
+    await resend.emails.send({
     from: "Notifyer <dinesh967070.ds@gmail.com>",
     to: toEmail,
     subject: "Welcome back!",
