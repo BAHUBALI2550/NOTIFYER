@@ -2,9 +2,15 @@ const { Worker } = require('bullmq');
 const webPush = require('web-push');
 const { prisma } = require('../prismaClient');
 
+// for docker
+// const connection = {
+//   host: process.env.REDIS_HOST || 'redis',
+//   port: Number(process.env.REDIS_PORT || 6379),
+// };
+
+// for render
 const connection = {
-  host: process.env.REDIS_HOST || 'redis',
-  port: Number(process.env.REDIS_PORT || 6379),
+  url: process.env.REDIS_URL,
 };
 
 // Configure web-push

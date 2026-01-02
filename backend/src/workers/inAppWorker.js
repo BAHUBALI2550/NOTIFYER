@@ -3,10 +3,17 @@ const { redis } = require('../config/redis');
 const {isUserOnline } = require('../presence');
 const { on } = require('nodemailer/lib/xoauth2');
 
+// for docker
+// const connection = {
+//   host: process.env.REDIS_HOST || 'redis',
+//   port: Number(process.env.REDIS_PORT || 6379),
+// };
+
+// for render
 const connection = {
-  host: process.env.REDIS_HOST || 'redis',
-  port: Number(process.env.REDIS_PORT || 6379),
+  url: process.env.REDIS_URL,
 };
+
 const INAPP_CHANNEL = 'inapp_notifications';
 
 async function publishInApp(userId, notification) {

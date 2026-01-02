@@ -1,9 +1,15 @@
 const { Worker } = require('bullmq');
 const { sendWelcomeEmail, sendWelcomeBackEmail } = require('../emailService');
 
+// for docker
+// const connection = {
+//   host: process.env.REDIS_HOST || 'redis',
+//   port: Number(process.env.REDIS_PORT || 6379),
+// };
+
+// for render
 const connection = {
-  host: process.env.REDIS_HOST || 'redis',
-  port: Number(process.env.REDIS_PORT || 6379),
+  url: process.env.REDIS_URL,
 };
 
 const emailWorker = new Worker(
