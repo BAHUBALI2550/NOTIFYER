@@ -55,7 +55,7 @@ async function sendWelcomeBackEmail(toEmail, name) {
     subject: "Welcome back!",
     html: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
   });
-    console.log('Welcome Back email sent:', data);
+    console.log('Welcome Back email sent:', info.data);
 } catch (err) {
     console.error('Error sending welcome back email:', err);
     throw err;
