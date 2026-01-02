@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 //SMTP Provider
 const transport = nodemailer.createTransport({
     service: "Gmail",
-    secure: true,
+    secure: false,
     auth: process.env.SMTP_USER ? {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
