@@ -51,7 +51,7 @@ async function sendWelcomeEmail(toEmail, name) {
   // }
 // );
 
-console.log('Welcome email sent:',info.data);
+// console.log('Welcome email sent:',info.data);
 } catch (err) {
     console.error('Error sending welcome email:', err);
     throw err;
@@ -93,7 +93,7 @@ async function sendWelcomeBackEmail(toEmail, name) {
 //   }
 // );
 
-console.log('Welcome Back email sent:',response.data);
+// console.log('Welcome Back email sent:',response.data);
 } catch (err) {
     console.error('Error sending welcome back email:', err);
     throw err;
@@ -116,6 +116,7 @@ console.log('Welcome Back email sent:',response.data);
 //     html: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
 //   });
 //     console.log('Welcome Back email sent:', info.data);
+
 
 module.exports = {
     sendWelcomeEmail,
