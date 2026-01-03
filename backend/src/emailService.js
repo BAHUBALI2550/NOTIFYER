@@ -1,6 +1,7 @@
 const nodemailer = require('nodemailer');
 const { Resend } = require("resend");
 const axios = require('axios');
+const { randomUUID } = require("crypto");
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -60,24 +61,13 @@ console.log('Welcome email sent:',response.data);
 async function sendWelcomeBackEmail(toEmail, name) {
     try {
         console.log(`gg:${toEmail}`);
-//     const info = 
-//     // await transport.sendMail({
-//     //     from: process.env.SMTP_USER,
-//     //     to: toEmail,
-//     //     subject: 'Welcome back! ',
-//     //     text: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
-//     // });
-//     await resend.emails.send({
-//     from: "Notifyer <onboarding@resend.dev>",
-//     to: toEmail,
-//     subject: "Welcome back!",
-//     html: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
-//   });
-//     console.log('Welcome Back email sent:', info.data);
+
 
     const response = await axios.post(
   'https://mailserver.automationlounge.com/api/v1/messages/send',
   {
+    messageId: randomUUID(),
+    from: "NOTIFYER <dinesh967070.ds@gmail.com>",
     to: toEmail,
     subject: "Welcome back!",
     html: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
@@ -96,6 +86,23 @@ console.log('Welcome Back email sent:',response.data);
     throw err;
 }
 }
+
+
+
+//     const info = 
+//     // await transport.sendMail({
+        // from: process.env.SMTP_USER,
+//     //     to: toEmail,
+//     //     subject: 'Welcome back! ',
+//     //     text: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
+//     // });
+//     await resend.emails.send({
+//     from: "Notifyer <onboarding@resend.dev>",
+//     to: toEmail,
+//     subject: "Welcome back!",
+//     html: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
+//   });
+//     console.log('Welcome Back email sent:', info.data);
 
 module.exports = {
     sendWelcomeEmail,
