@@ -7,15 +7,15 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 //SMTP Provider
 // for docker
-// const transport = nodemailer.createTransport({
-//     service: "Gmail",
-//     secure: false,
-//     auth: process.env.SMTP_USER ? {
-//         user: process.env.SMTP_USER,
-//         pass: process.env.SMTP_PASS,
-//     }
-//     : undefined,
-// });
+const transport = nodemailer.createTransport({
+    service: "Gmail",
+    secure: false,
+    auth: process.env.SMTP_USER ? {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+    }
+    : undefined,
+});
 
 
 async function sendWelcomeEmail(toEmail, name) {
@@ -23,20 +23,20 @@ async function sendWelcomeEmail(toEmail, name) {
         console.log(`gg:${toEmail}`);
     const info = 
     // for docker
-    // await transport.sendMail({
-    //     from: process.env.SMTP_USER,
-    //     to: toEmail,
-    //     subject: 'Welcome! ',
-    //     text: `Hi ${name}, Welcome! Thanks for using our service, wishing you a smooth experience through our platform. Feel free to send us any issue or troubleshoot`,
-    // });
+    await transport.sendMail({
+        from: process.env.SMTP_USER,
+        to: toEmail,
+        subject: 'Welcome! ',
+        text: `Hi ${name}, Welcome! Thanks for using our service, wishing you a smooth experience through our platform. Feel free to send us any issue or troubleshoot`,
+    });
 
     // for render
-    await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: 'hs49271.rkt@gmail.com',
-    subject: "Welcome!",
-    text: `Hi ${name}, Welcome! Thanks for using our service, wishing you a smooth experience through our platform. Feel free to send us any issue or troubleshoot`,
-  });
+//     await resend.emails.send({
+//     from: "onboarding@resend.dev",
+//     to: 'hs49271.rkt@gmail.com',
+//     subject: "Welcome!",
+//     text: `Hi ${name}, Welcome! Thanks for using our service, wishing you a smooth experience through our platform. Feel free to send us any issue or troubleshoot`,
+//   });
     console.log('Welcome email sent:', info.data);
 } catch (err) {
     console.error('Error sending welcome email:', err);
@@ -49,20 +49,20 @@ async function sendWelcomeBackEmail(toEmail, name) {
         console.log(`gg:${toEmail}`);
             const info = 
     // for docker
-    // await transport.sendMail({
-    //     from: process.env.SMTP_USER,
-    //     to: toEmail,
-    //     subject: 'Welcome back! ',
-    //     text: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
-    // });
+    await transport.sendMail({
+        from: process.env.SMTP_USER,
+        to: toEmail,
+        subject: 'Welcome back! ',
+        text: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
+    });
 
     // for render
-    await resend.emails.send({
-    from: process.env.RESEND_ID,
-    to: 'hs49271.rkt@gmail.com',
-    subject: "Welcome back!",
-    text: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
-  });
+//     await resend.emails.send({
+//     from: process.env.RESEND_ID,
+//     to: 'hs49271.rkt@gmail.com',
+//     subject: "Welcome back!",
+//     text: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
+//   });
     console.log('Welcome Back email sent:', info.data);
 
 } catch (err) {

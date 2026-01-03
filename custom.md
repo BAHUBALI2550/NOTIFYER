@@ -1,4 +1,5 @@
 in case of running in docker, replace scripts in backend/package.json with this:
+// for docker
 "scripts": {
     "dev": "node src/server.js",
     "prisma:generate": "npx prisma generate",
@@ -6,6 +7,7 @@ in case of running in docker, replace scripts in backend/package.json with this:
   },
 
   else, if on render
+// for render
   "scripts": {
   "dev": "nodemon src/server.js",
   "start": "node src/server.js",

@@ -1,15 +1,15 @@
 const { Queue } = require('bullmq');
 
 // for docker
-// const connection = {
-//   host: process.env.REDIS_HOST || 'redis',
-//   port: Number(process.env.REDIS_PORT || 6379),
-// };
+const connection = {
+  host: process.env.REDIS_HOST || 'redis',
+  port: Number(process.env.REDIS_PORT || 6379),
+};
 
 // for render
-const connection = {
-  url: process.env.REDIS_URL,
-};
+// const connection = {
+//   url: process.env.REDIS_URL,
+// };
 
 const emailQueue = new Queue('email_queue', {
   connection,
