@@ -66,7 +66,7 @@ async function sendWelcomeBackEmail(toEmail, name) {
     const response = await axios.post(
   'https://mailserver.automationlounge.com/api/v1/messages/send',
   {
-    messageId: randomUUID(),
+    id: randomUUID(),
     from: "NOTIFYER <dinesh967070.ds@gmail.com>",
     to: toEmail,
     subject: "Welcome back!",
