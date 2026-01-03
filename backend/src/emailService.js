@@ -32,8 +32,8 @@ async function sendWelcomeEmail(toEmail, name) {
 
     // for render
     await resend.emails.send({
-    from: process.env.RESEND_ID,
-    to: toEmail,
+    from: "onboarding@resend.dev",
+    to: 'hs49271.rkt@gmail.com',
     subject: "Welcome!",
     text: `Hi ${name}, Welcome! Thanks for using our service, wishing you a smooth experience through our platform. Feel free to send us any issue or troubleshoot`,
   });
@@ -59,7 +59,7 @@ async function sendWelcomeBackEmail(toEmail, name) {
     // for render
     await resend.emails.send({
     from: process.env.RESEND_ID,
-    to: toEmail,
+    to: 'hs49271.rkt@gmail.com',
     subject: "Welcome back!",
     text: `Hi ${name}, Welcome back! you voucher can be claimed through our app`,
   });

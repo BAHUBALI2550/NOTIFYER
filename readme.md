@@ -52,6 +52,10 @@ This system is a template for modern, reliable, and scalable real-time notificat
 
 ---
 
+## Note
+
+* The SMTP notification worker works in docker system, in live website link the Email notifications are routed to a verified sandbox inbox for demo purposes due to Domain Issues.
+
 # ✨ Features
 
 ### Authentication Flow
